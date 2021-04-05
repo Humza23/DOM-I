@@ -108,12 +108,27 @@ const contactP = document.querySelectorAll('.contact p')
 contactP[0].textContent = siteContent['contact']['address']
 contactP[1].textContent = siteContent['contact']['phone']
 contactP[2].textContent = siteContent['contact']['email']
-
 // console.log(contactP[0]);
 // console.log(contactP[1]);
 // console.log(contactP[2]);
 
 const footerP = document.querySelector('footer p')
 footerP.textContent = siteContent['footer']['copyright']
+// console.log(footerP)
 
-console.log(footerP)
+navList.forEach(function(a){
+  a.style.color = "blue"
+})
+
+const blogLink = document.createElement('a')
+blogLink.textContent = 'Blog'
+blogLink.href = '#'
+blogLink.style.color = "blue"
+document.querySelector('nav').appendChild(blogLink)
+
+
+const forYouLink = document.createElement('a')
+forYouLink.textContent = 'For You'
+forYouLink.href = '#'
+forYouLink.style.color = "blue"
+document.querySelector('nav').prepend(forYouLink)
